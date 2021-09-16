@@ -20,7 +20,7 @@ func main() {
 	})
 
 	router.GET("/:shortURL", func(c *gin.Context){
-		handler.HandleShortURL(c)
+		handler.HandleShortUrlRedirect(c)
 	})
 
 	// init storage

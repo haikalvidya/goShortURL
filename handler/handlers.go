@@ -17,7 +17,7 @@ func CreateShortURL(c *gin.Context){
 	var createReq URLCreationReq
 	if err := c.ShouldBindJSON(&createReq); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
-			"error": err.Error()
+			"error": err.Error(),
 		})
 		return
 	}
